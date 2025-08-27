@@ -1,0 +1,212 @@
+﻿cd_autostrada,ramo,c_str,c_ram,t_des_str,t_des_ram,concat
+A01,A1 Milano-Napoli,A01,A1,A1 MILANO-NAPOLI,A1 Milano-Napoli,A01-A1
+D02,A1 Diramaz. Capodichino-Tang.Napoli,A01,D2,A1 MILANO-NAPOLI,A1 Diramaz. Capodichino-Tang.Napoli,A01-D2
+D18,A1 Diramazione Roma nord - GRA,A01,D18,A1 MILANO-NAPOLI,A1 Diramazione Roma nord - GRA,A01-D18
+D19,A1 Diramazione Roma sud - GRA,A01,D19,A1 MILANO-NAPOLI,A1 Diramazione Roma sud - GRA,A01-D19
+F01,SV. BARRA CAPODIC. RAMO A,,,,,-
+F02,SV. BARRA CAPODIC. RAMO B,,,,,-
+F03,SV. BARRA CAPODIC. RAMO C,A01,F3,A1 MILANO-NAPOLI,RAMO CAPODICHINO A1 SUD,A01-F3
+F04,SV. BARRA CAPODIC. RAMO D,,,,,-
+F06,SV. BARRA CAPODIC. RAMO E,,,,,-
+F07,SV. BARRA CAPODIC. RAMO F,,,,,-
+F08,SV. BARRA CAPODIC. RAMO G,,,,,-
+R05,Racc. A1 Milano-Piazzale Corvetto,,,,,-
+R06,Racc. A1-Tangenziale est Milano,,,,,-
+R07,Raccordo Casoria-Capodichino,,,,,-
+R08,Raccordo A1-Caserta sud,,,,,-
+R28,Complanare Milano-Poasco-Via Emilia,,,,,-
+R42,Raccordo A1/FI-PI-LI,,,,,-
+R43,Raccordo Sasso Marconi-S.S. 64,,,,,-
+R49,Complanare di Piacenza sud,,,,,-
+R65,Complanare Firenze nord,,,,,-
+R79,A1 Interna,,,,,-
+VAR,Variante di valico,A01,VAR,A1 MILANO-NAPOLI,A1 DIRETTISSIMA,A01-VAR
+A02,SALERNO-REGGIO CALABRIA,,,,,-
+A03,A3 Napoli-Salerno,A03,A3,A3 NAPOLI-SALERNO,A3 Napoli-Salerno,A03-A3
+A04,A4 Torino-Trieste,A04,A4,A4 MILANO-BRESCIAÔ∏è,A4 Torino-Trieste,A04-A4
+R03,Racc. A4 Monza-Tang.nord Milano,,,,,-
+R10,Racc. A4 Ghisolfa-Tang.ovest Milano,,,,,-
+R20,Raccordo A4 Milano Viale Certosa,,,,,-
+R44,Raccordo Sistiana-Trieste,,,,,-
+R45,Raccordo per Fernetti,,,,,-
+R47,Racc. A4 Chivasso - SS 31bis,,,,,-
+R51,BRETELLA PORCILLANA EST,,,,,-
+R54,RACCORDO TG.LE DI LIMENA,,,,,-
+R55,RACC. O TG.LE SUD DI VICENZA,,,,,-
+R56,VIALE SERENISSIMA,,,,,-
+R57,RACCORDO VARIANTE DI LONATO,,,,,-
+R58,RACC. TANG LIMENA-TANG NORD PD,,,,,-
+R60,BRETELLA DI NOVENTA,,,,,-
+R77,BRETELLA DI LATISANA,,,,,-
+R78,RACC.BRESCIA OVEST-R76 BREBEMI,,,,,-
+R89,RACC.ALTE MONTECCHIO BS-PD,,,,,-
+T21,TANGENZIALE NOVARA,,,,,-
+T22,CIRCONVALLAZIONE GALLIATE (NO),,,,,-
+T23,CIRCONVALLAZIONE ROMENTINO (NO),,,,,-
+A05,A5 Torino-Aosta-Monte Bianco,A05,A5,A5 TORINO - AOSTA - MONTE BIANCO,A5 Torino-Aosta-Monte Bianco,A05-A5
+R04,Raccordo A4-A5 Ivrea-Santhi√†,A05,R4,A5 TORINO - AOSTA - MONTE BIANCO,Raccordo A4-A5 Ivrea-Santhia,A05-R4
+R26,A5 area merci di Aosta,,,,,-
+R29,Raccordo A5 Aosta-Gran San Bernardo,,,,,-
+A06,A6 Torino-Savona,A06,A6,A6 TORINO-SAVONA,A6 Torino-Savona,A06-A6
+D06,A6 Diramazione per Fossano,,,,,-
+A07,A7 Milano-Genova,A07,A7,A7 SERRAVALLEÔ∏è-GENOVA,A7 Milano-Serravalle-Genova,A07-A7
+A53,Raccordo Bereguardo-Pavia,,,,,-
+R35,Raccordo A7-Piazza Maggi,,,,,-
+A08,A8 Milano-Varese,A08,A8,A8 MILANO-VARESE,A8 Milano-Varese,A08-A8
+D08,Diramaz. A8-A26 Gallarate-Gattico,A08,D8,A8 MILANO-VARESE,Diramaz. A8-A26 Gallarate-Gattico,A08-D8
+R37,Raccordo A8-Fiera Milano,,,,,-
+A09,A9 Lainate-Chiasso,A09,A9,A9 LAINATE-COMO CHIASSO,A9 Lainate-Como-Chiasso,A09-A9
+A10,A10 Genova-Ventimiglia,A10,A10,A10 GENOVA-SAVONA,A10 Genova-Savona-Ventimiglia,A10-A10
+R24,Complanare di Savona,A10,R24,A10 GENOVA-SAVONA,Complanare di Savona,A10-R24
+A11,A11 Firenze-Pisa nord,A11,A11,A11 FIRENZE-PISA NORD,A11 Firenze-Pisa nord,A11-A11
+D11,Diramazione A11-A12 Lucca-Viareggio,A11,D11,A11 FIRENZE-PISA NORD,Diramazione A11-A12 Lucca-Viareggio,A11-D11
+R11,Raccordo A1-A11 - Firenze nord,A11,R11,A11 FIRENZE-PISA NORD,Raccordo A1-A11 - Firenze nord,A11-R11
+A12,A12 Genova-Rosignano Marittimo,A12,A12,A12 GENOVA-ROMA,A12 Genova-Rosignano Marittimo,A12-A12
+A92,A12 Roma-Civitavecchia,A12,A92,A12 ROMA-CIVITAVECCHIA,A12 Roma-Civitavecchia-Tarquinia,A12-A92
+D12,A12 Diramazione per Livorno,,,,,-
+R18,Raccordo Pisa Centro - FI-PI-LI,,,,,-
+R30,Raccordo Collesalvetti - FI-PI-LI,,,,,-
+R59,RACC. A12/VIAREGGIO,,,,,-
+R69,RACCORDO ROSIGNANO 303,,,,,-
+A13,A13 Bologna-Padova,A13,A13,A13 BOLOGNA-PADOVA,A13 Bologna-Padova,A13-A13
+D13,A13 Diramazione per Padova sud,,,,,-
+D23,A13 Diramazione per Ferrara,,,,,-
+R13,Raccordo A13-Tangenziale Bologna,,,,,-
+A14,A14 Bologna-Taranto,A14,A14,A14 BOLOGNA-TARANTO,A14 Bologna-Taranto,A14-A14
+D14,A14 Diramazione per Ravenna,A14,D14,A14 BOLOGNA-TARANTO,A14 Diramazione per Ravenna,A14-D14
+D94,A14 Raccordo per Tangenziale Bari,,,,,-
+R14,Raccordo A1-A14 Bologna Casalecchio,,,,,-
+R74,RACCORDO PALAGIANELLO,,,,,-
+R88,RACCORDO D94 CON SS96,,,,,-
+A15,A15 Parma-La Spezia,A15,A15,A15 PARMA-LA SPEZIA,A15 Parma-La Spezia,A15-A15
+D15,A15 Diram.La Spezia-S.Stefano Magra,,,,,-
+D16,A15 Diram. Sissa- Trecasali,,,,,-
+R19,A15 Raccordo La Spezia-Lerici,,,,,-
+A16,A16 Napoli-Canosa,A16,A16,A16 NAPOLI-CANOSA,A16 Napoli-Canosa,A16-A16
+A18,A18 Messina-Catania,,,,,-
+A19,A19 Palermo-Catania,,,,,-
+D29,DIRAMAZIONE PER CALTANISSETTA,,,,,-
+A20,A20 Messina-Palermo,,,,,-
+A21,A21 Torino-Piacenza-Brescia,A21,A21,A21 TORINO-BRESCIA,A21 Torino-Piacenza-Brescia,A21-A21
+D21,Diramazione A1-A21 per Fiorenzuola,,,,,-
+F05,RACCORDO COMPLANARE A21,,,,,-
+R61,RACCORDO A21 - SS10,,,,,-
+R66,RACCORDO BRESCIA SUD,,,,,-
+R67,RACCORDO A21/R68,,,,,-
+R68,RACC. OSPITALETTO-MONTICHIARI,,,,,-
+A22,A22 Brennero-Modena,A22,A22,A22 BRENNERO-MODENA,A22 Brennero-Modena,A22-A22
+A23,A23 Palmanova-Tarvisio,A23,A23,A23 UDINE-TARVISIO,A23 Palmanova-Udine-Tarvisio,A23-A23
+A24,A24 Roma-L'Aquila-Teramo,A24,A24,A24 ROMA-TERAMO,A24 Roma L'Aquila-Teramo,A24-A24
+C01,Complanare A24 SX,,,,,-
+C02,Complanare A24 DX,,,,,-
+C03,Complanare TPU DX,,,,,-
+C04,Complanare TPU SX,,,,,-
+D28,A24-GRA-Tangenziale est Roma,A24,D28,A24 ROMA-TERAMO,A24 Roma L'Aquila-Teramo,A24-D28
+A25,A25 Torano-Pescara,A25,A25,A25 TORANO-PESCARA,A25 Torano-Pescara,A25-A25
+R48,SUPERSTRADA DEL LIRI - SS690,,,,,-
+A26,A26 Genova Voltri-Gravellona Toce,A26,A26,A26 GE. VOLTRI-GRAVELL. TOCE,A26 Ge.Voltri-Gravell.Toce,A26-A26
+D26,Diramazione A26-A7 Predosa-Bettole,A26,D26,A26 GE. VOLTRI-GRAVELL. TOCE,Diramazione A26-A7 Predosa-Bettole,A26-D26
+D36,Diramaz. A26-A4 Stroppiana Santhi√†,A26,D36,A26 GE. VOLTRI-GRAVELL. TOCE,Diramaz. A26-A4 Stroppiana Santhia,A26-D36
+A27,A27 Venezia-Belluno,A27,A27,A27 VENEZIA - BELLUNO,A27 Venezia-Belluno,A27-A27
+R64,RACC. CONEGLIANO,,,,,-
+A28,A28 Portogruaro-Conegliano,A28,A28,A28 PORTOGRUARO-PORDENONE,A28 Portogruaro-Pordenone-Conegliano,A28-A28
+R39,Racc. Sacile ovest-SS 13 Pontebbana,,,,,-
+R40,Racc. Sacile est-SS 13 Pontebbana,,,,,-
+R41,Racc. Fontanafredda-SS13 Pontebbana,,,,,-
+R75,RACC GODEGA-SP41,,,,,-
+A30,A30 Caserta-Salerno,A30,A30,A30 CASERTA-SALERNO,A30 Caserta-Salerno,A30-A30
+A31,A31 Badia Polesine-Piovene Rocchett,,,,,-
+R72,ROTATORIA LONGARE-MONTEGALDELLA,,,,,-
+R73,RACCORDO LONGARE-MONTEGALDELLA,,,,,-
+A32,A32 Torino-Bardonecchia,,,,,-
+A33,A33 Asti Cuneo,,,,,-
+A93,MARENE - CHERASCO,,,,,-
+A34,VILLESSE-GORIZIA,,,,,-
+A35,CHIARI EST-NODO MELZO,,,,,-
+D35,NODO LISCATE-LISCATE,,,,,-
+R76,RACCORDO A35 BREBEMI,,,,,-
+V35,VARIANTE DI LISCATE,,,,,-
+A36,Pedemontana Lombarda,,,,,-
+A50,A50 Tangenziale ovest Milano,A50,A50,A50 TANGENZIALE OVEST DI MILANO,A50 Tangenziale ovest Milano,A50-A50
+R36,Raccordo SS11-SS33,,,,,-
+R70,TANG.OV.MI.- RACC.ROT. GHISOLFA,,,,,-
+A51,A51 Tangenziale est Milano,A51,A51,A51 TANGENZIALE EST DI MILANO,A51 Tangenziale est Milano,A51-A51
+R09,Racc. A4 Agrate-Tang. est Milano,,,,,-
+A52,A52 Tangenziale nord Milano,,,,,-
+R52,RACCORDO BARANZATE,,,,,-
+A54,Tangenziale Pavia,,,,,-
+A56,Tangenziale Napoli,A56,A56,A56 TANGENZIALE DI NAPOLI,Tangenziale Napoli,A56-A56
+R87,Galleria Cosenza-Pozzuoli,,,,,-
+A57,TANGENZIALE DI MESTRE,A57,A57,A57 TANGENZIALE DI MESTRE,A57 Tangenziale di Mestre,A57-A57
+D25,RACCORDO AEROPORTO MARCO POLO,,,,,-
+R63,RACCORDO TUBITAL,,,,,-
+A58,AGRATE-MELEGNANO,,,,,-
+A59,Tangenziale di Como,,,,,-
+R80,RACCORDO A9/A59 SUD,,,,,-
+R81,RACCORDO A9/A59 NORD,,,,,-
+A60,TANGENZIALE DI VARESE,,,,,-
+P05,Strada Milano Viale Zara - Lecco,,,,,-
+P44,Superstrada Milano Meda,,,,,-
+RA3,SIENA-FIRENZE,,,,,-
+S16,SS16 Adriatica,,,,,-
+S25,SS25 Torino-Avigliana,,,,,-
+S26,Strada Statale 26 Dir,,,,,-
+S30,Raccordo Salerno-Avellino,,,,,-
+S31,Raccordo Lerici-SS331,,,,,-
+S33,SS33 del Sempione,,,,,-
+S34,SS34 del Lago Maggiore,,,,,-
+S36,SS36 Sesto San Giovanni,,,,,-
+S62,SS162 Pomigliano d'Arco,,,,,-
+S80,S. P. EX S.S.80,,,,,-
+S96,S.S.96 ALTAMURA-BARI,,,,,-
+SAM,Superstrada Acerra-Afragola,,,,,-
+SAS,Superstrada Pomigliano-VillaLiterno,,,,,-
+SC1,Raccordo A4-A8 Milano Viale Certosa,,,,,-
+SC5,Strada Varese-Gazzada,,,,,-
+SGC,Firenze Pisa Livorno,SGC,SGC,SGC FIRENZE-PISA-LIVORNO,Firenze Pisa Livorno,SGC-SGC
+D27,FI-PI-LI Diramazione per Pisa,SGC,D27,SGC FIRENZE-PISA-LIVORNO,FI-PI-LI Diramazione per Pisa,SGC-D27
+R33,Raccordo FI-PI-LI - A12,,,,,-
+SGI,Superstrada per Giulianova,,,,,-
+SMB,Route Nationale 205,,,,,-
+R27,RN205 area merci di Passy,,,,,-
+SNB,Strada Nuova Bazzanese,,,,,-
+SP1,Strada Casoria - Appia,,,,,-
+SP2,Strada Melegnano-Binasco,,,,,-
+SP3,SP527 ORIGGIO - UBOLDO,,,,,-
+SPV,SPV Pedemontana Veneta,,,,,-
+R82,SPV VALDASTICO,,,,,-
+R86,RACC.SPRESIANO EST,,,,,-
+SS1,SS1 Aurelia,,,,,-
+698,SS 698 PORTO CIVITAVECCHIA,,,,,-
+S1S,S.S 1 AURELIA SUD,,,,,-
+SS7,Strada Taranto-Bari,,,,,-
+SS9,SS9 Via Emilia,,,,,-
+SSD,Superstrada per Domodossola,,,,,-
+T03,Tangenziale nord Torino,T03,T3,T3 TANGENZIALE NORD DI TORINO,Tangenziale nord Torino,T03-T3
+D03,Diramazione per Abbadia,,,,,-
+R38,Raccordo Aeroporto Torino Caselle,,,,,-
+T05,Tangenziale sud Torino,T05,T5,T5 TANGENZIALE SUD DI TORINO,Tangenziale sud Torino,T05-T5
+D01,Diramazione per Pinerolo,T05,D1,T5 TANGENZIALE SUD DI TORINO,Diramazione per Pinerolo,T05-D1
+D05,Diramazione per Moncalieri,T05,D5,T5 TANGENZIALE SUD DI TORINO,Diramazione per Moncalieri,T05-D5
+R62,RACCORDO TANG.LE SUD TO / SP7,,,,,-
+T06,Tangenziale Bologna,,,,,-
+R01,Racc.Borgo Panigale-Tang.Bologna,,,,,-
+T07,Tangenziale Bari,,,,,-
+T11,Tangenziale Udine,,,,,-
+R34,Raccordo A23-Tangenziale Udine,,,,,-
+T12,TANGENZIALE SUD DI VERONA,,,,,-
+R50,RACCORDO PORCILLANA OVEST,,,,,-
+T13,TANGENZIALE EST DI VERONA,,,,,-
+T14,TANGENZIALE NORD DI PADOVA,,,,,-
+T15,TANGENZIALE DI LIMENA,,,,,-
+T16,TANGENZIALE SUD DI VICENZA,,,,,-
+T17,VARIANTE DI LONATO,,,,,-
+T18,TANGENZIALE BRESCIA EST,,,,,-
+R53,RACCORDO BRESCIA EST,,,,,-
+T19,TANGENZIALE EST DI ROMA,,,,,-
+T20,COMPLANARE SENIGALLIA,,,,,-
+T90,Grande Raccordo Anulare di Roma,,,,,-
+T93,Roma-aereoporto di Fiumicino,,,,,-
+TR1,Traforo del Monte Bianco,,,,,-
+TR4,Traforo del Frejus,TR4,TR4,TR4 TRAFORO DEL FREJUS,Traforo del Frejus,TR4-TR4
+TSV,TUNNEL SCHIO-VALDAGNO,,,,,-
