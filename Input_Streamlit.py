@@ -527,10 +527,10 @@ else:
 
 ######### da cancellare!!!!############
 # Visualizza la matrice filtrata
-if consumo_medio_km_l is not None:
-    st.dataframe(matrice_filtrata_df)
-else:
-    st.warning("Consumo medio non disponibile per questa combinazione.")
+#if consumo_medio_km_l is not None:
+#    st.dataframe(matrice_filtrata_df)
+#else:
+#    st.warning("Consumo medio non disponibile per questa combinazione.")
 
 
 ################### NETWORKX_2 ###################
@@ -613,18 +613,26 @@ else:
 
 ##################### MAPPA PERCORSO EFFICIENTE (VERTICALE) #####################
 
+# Filtra e ordina il percorso
 df_percorso_eff = info_filtrata_df[info_filtrata_df["nodo_id"].isin(percorso_2)]
 df_percorso_eff["ordine"] = df_percorso_eff["nodo_id"].apply(lambda x: percorso_2.index(x))
 df_percorso_eff = df_percorso_eff.sort_values("ordine").reset_index(drop=True)
 
+# Separa i nodi
 nodo_partenza_eff = df_percorso_eff.iloc[0:1]
 nodo_uscita_eff = df_percorso_eff.iloc[-1:]
 nodi_intermedi_eff = df_percorso_eff.iloc[1:-1]
 
+# Ricompone il DataFrame
 df_percorso_eff = pd.concat([nodo_partenza_eff, nodi_intermedi_eff, nodo_uscita_eff])
 
+# Crea la figura
 fig_eff = go.Figure()
+
+# Aggiungi i nodi con posizione invertita sull'asse y
 for i, row in df_percorso_eff.iterrows():
+    y_pos = len(df_percorso_eff) - 1 - i  # Inverti la posizione verticale
+
     if i == 0:
         color = 'green'
         label = 'Entrata'
@@ -637,12 +645,12 @@ for i, row in df_percorso_eff.iterrows():
         color = 'blue'
         label = 'Distributore'
         testo = f"{label}:<br>{row['nodo_name']}<br>{row['Brand']}"
-    
+
     posizione_testo = "middle right" if i % 2 == 0 else "middle left"
-    
+
     fig_eff.add_trace(go.Scatter(
         x=[0],
-        y=[i],
+        y=[y_pos],
         mode='markers+text',
         marker=dict(size=12, color=color),
         text=[testo],
@@ -650,22 +658,24 @@ for i, row in df_percorso_eff.iterrows():
         hoverinfo='text'
     ))
 
-# Linea verticale di collegamento
+# Linea verticale di collegamento (invertita)
 fig_eff.add_trace(go.Scatter(
     x=[0]*len(df_percorso_eff),
-    y=list(range(len(df_percorso_eff))),
+    y=list(reversed(range(len(df_percorso_eff)))),  # Inverti l'ordine
     mode='lines',
     line=dict(color='gray', width=2),
     hoverinfo='skip'
 ))
 
+# Layout della figura
 fig_eff.update_layout(
     showlegend=False,
     xaxis=dict(showticklabels=False, showgrid=False, zeroline=False),
     yaxis=dict(showticklabels=False, showgrid=False, zeroline=False),
     margin=dict(l=20, r=20, t=20, b=20),
-    height=600  # Altezza aumentata per accomodare più nodi
+    height=600
 )
+
 
 col19, col20 = st.columns(2)
 with col19:
@@ -850,6 +860,7 @@ df_percorso_eff = pd.concat([nodo_partenza_eff, nodi_intermedi_eff, nodo_uscita_
 fig_eff_litri = go.Figure()
 
 for i, row in df_percorso_eff.iterrows():
+    y_pos = len(df_percorso_eff) - 1 - i  # Inverti la posizione verticale 
     if i == 0:
         color = 'green'
         label = 'Entrata'
@@ -867,7 +878,7 @@ for i, row in df_percorso_eff.iterrows():
     
     fig_eff_litri.add_trace(go.Scatter(
         x=[0],
-        y=[i],
+        y=[y_pos],
         mode='markers+text',
         marker=dict(size=12, color=color),
         text=[testo],
@@ -878,7 +889,7 @@ for i, row in df_percorso_eff.iterrows():
 # Linea verticale di collegamento
 fig_eff_litri.add_trace(go.Scatter(
     x=[0]*len(df_percorso_eff),
-    y=list(range(len(df_percorso_eff))),
+    y=list(reversed(range(len(df_percorso_eff)))),
     mode='lines',
     line=dict(color='gray', width=2),
     hoverinfo='skip'
