@@ -514,6 +514,17 @@ for nodo1, nodo2 in combinazioni:
         else:
             st.warning("Consumo medio non disponibile per questa combinazione.")
 
+# Penalizzazione per archi con nodo2 non appartenente ai brand selezionati
+penalizzazione = 1.15  # ad esempio +15% sul costo
+
+for arco in matrice:
+    brand_nodo2 = info_filtrata_df.loc[
+        info_filtrata_df["nodo_id"] == arco["nodo_id_arrivo"], "Brand"
+    ].values[0] if "Brand" in info_filtrata_df.columns else None
+
+    if brand_selezionati and brand_nodo2 not in brand_selezionati:
+        arco["peso_arco"] = round(arco["peso_arco"] * penalizzazione, 2)
+
 # Converti in DataFrame
 matrice_df = pd.DataFrame(matrice)
 
@@ -750,6 +761,17 @@ for nodo1, nodo2 in combinazioni:
             })
         else:
             st.warning("Consumo medio non disponibile per questa combinazione.")
+
+# Penalizzazione per archi con nodo2 non appartenente ai brand selezionati
+penalizzazione = 1.15  # ad esempio +15% sul costo
+
+for arco in matrice:
+    brand_nodo2 = info_filtrata_df.loc[
+        info_filtrata_df["nodo_id"] == arco["nodo_id_arrivo"], "Brand"
+    ].values[0] if "Brand" in info_filtrata_df.columns else None
+
+    if brand_selezionati and brand_nodo2 not in brand_selezionati:
+        arco["peso_arco"] = round(arco["peso_arco"] * penalizzazione, 2)
 
 # Converti in DataFrame
 matrice_df = pd.DataFrame(matrice)
