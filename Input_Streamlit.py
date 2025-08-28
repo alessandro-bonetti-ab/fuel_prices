@@ -325,14 +325,8 @@ else:
     col10, col11, col12 = st.columns(3)
     with col11:
         brand_unici = nodi_distributori["Brand"].dropna().unique()
-        brand_opzioni = ["TUTTI I BRAND"] + sorted(brand_unici.tolist())
-        brand_selezionato = st.selectbox("Seleziona un Brand (opzionale)", options=brand_opzioni)
-
-    # Applica il filtro solo se è stato selezionato un brand specifico
-    if brand_selezionato == "TUTTI I BRAND":
-        brand_info = nodi_distributori
-    else:
-        brand_info = nodi_distributori[nodi_distributori["Brand"] == brand_selezionato]
+        brand_opzioni = sorted(brand_unici.tolist())
+        brand_selezionati = st.multiselect("Seleziona uno o più Brand (opzionale)", options=brand_opzioni)
 
     ##################### ANDAMENTO PREZZI #####################
     st.markdown(
@@ -348,16 +342,17 @@ else:
         how="inner"
     )
 
+
     # Calcola la media giornaliera totale (prima del filtro)
     media_giornaliera_df = prezzi_con_info.groupby("data_update")["prezzo"].mean().reset_index()
     media_giornaliera_df.rename(columns={"prezzo": "prezzo_medio_giornaliero"}, inplace=True)
 
-    # Filtra per brand selezionato (solo per le linee dei distributori)
-    if brand_selezionato != "TUTTI I BRAND":
-        prezzi_con_info_filtrato = prezzi_con_info[prezzi_con_info["Brand"] == brand_selezionato]
-    else:
+    # Se non è stato selezionato alcun brand, mostra tutti
+    if not brand_selezionati:
         prezzi_con_info_filtrato = prezzi_con_info
-
+    else:
+        prezzi_con_info_filtrato = prezzi_con_info[prezzi_con_info["Brand"].isin(brand_selezionati)]
+    
     fig_prezzi = go.Figure()
 
     # Linee per ogni distributore filtrato
