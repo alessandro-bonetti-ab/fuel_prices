@@ -161,11 +161,16 @@ prezzi_df = pd.read_csv("fact_prezzi_autostrade/fact_prezzi_completo.csv")
 prezzi_df["data_update"] = pd.to_datetime(prezzi_df["data_update"], format="%d/%m/%Y")
 prezzi_df["distributore_id"] = prezzi_df["distributore_id"].astype(str)
 
-prezzi_filtrati = prezzi_df[
-    (prezzi_df["data_update"] >= pd.to_datetime(date_range[0])) &
-    (prezzi_df["data_update"] <= pd.to_datetime(date_range[1])) &
-    (prezzi_df["tipo_carburante"] == carburante)
-]
+if date_range and len(date_range) == 2:
+    prezzi_filtrati = prezzi_df[
+        (prezzi_df["data_update"] >= pd.to_datetime(date_range[0])) &
+        (prezzi_df["data_update"] <= pd.to_datetime(date_range[1])) &
+        (prezzi_df["tipo_carburante"] == carburante)
+    ]
+else:
+    st.warning("Per favore, seleziona **sia la data di inizio che quella di fine** per continuare.")
+    st.stop()  
+    prezzi_filtrati = pd.DataFrame()
 
 #################### UNISCI INFO PER I NODI ####################
 info_nodi_df = pd.read_csv("dim_nodi/dim_nodi.csv")
