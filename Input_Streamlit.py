@@ -321,12 +321,10 @@ else:
     st.plotly_chart(fig, use_container_width=True)
 
     ##################### ELENCO A TENDINA BRAND #####################
-   
-    col10, col11, col12 = st.columns(3)
-    with col11:
-        brand_unici = nodi_distributori["Brand"].dropna().unique()
-        brand_opzioni = sorted(brand_unici.tolist())
-        brand_selezionati = st.multiselect("Seleziona uno o più Brand (opzionale)", options=brand_opzioni)
+    # Sidebar per i filtri
+    brand_unici = nodi_distributori["Brand"].dropna().unique()
+    brand_opzioni = sorted(brand_unici.tolist())
+    brand_selezionati = st.sidebar.multiselect("Seleziona uno o più Brand (opzionale)", options=brand_opzioni)
 
     ##################### ANDAMENTO PREZZI #####################
     st.markdown(
