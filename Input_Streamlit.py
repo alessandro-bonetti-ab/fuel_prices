@@ -274,7 +274,12 @@ if nodi_distributori.empty:
     st.warning("Nessun distributore nel percorso ha prezzi disponibili per il carburante selezionato nel periodo scelto.")
 else:
     st.dataframe(df_visualizzato.drop(columns=["ordine", "nodo_id", "dtx", "autostrada_id", "km"]), use_container_width=True)
-
+    # postilla
+    st.markdown(
+        "<div style='text-align: right; font-size: 10px;'>*La tabella dei distributori non tiene conto della selezione dei Brand</div>",
+        unsafe_allow_html=True
+    )
+    
     ##################### MAPPA INTERATTIVA #####################
     st.markdown(
     "<div style='text-align: center; font-size: 25px; font-weight: bold;'><br>Mappa del percorso</div>",
@@ -319,7 +324,11 @@ else:
         height=300
     )
     st.plotly_chart(fig, use_container_width=True)
-
+    # postilla
+    st.markdown(
+        "<div style='text-align: right; font-size: 10px;'>*La mappa dei distributori non tiene conto della selezione dei Brand</div>",
+        unsafe_allow_html=True
+    )
     ##################### ELENCO A TENDINA BRAND #####################
     # Sidebar per i filtri
     brand_unici = nodi_distributori["Brand"].dropna().unique()
@@ -452,9 +461,10 @@ with col13:
         "<div style='text-align: center; font-size: 25px; font-weight: bold;'><br>Percorso migliore per<br>minimizzare il costo del carburante</div>",
         unsafe_allow_html=True
     )
-    #spazio a capo
+col10, col11 = st.columns(2)
+with col10:    
     st.markdown(
-        "<div style='text-align: center; font-size: 10px;'><br><br></div>",
+        "<div style='text-align: center; font-size: 10px;'>*Assunzioni: partenza con il serbatoio pieno; ogni rifornimento raggiunge la capacità massima del serbatoio<br>Precauzione: arrivo con almeno 3l di carburante nel serbatoio</div>",
         unsafe_allow_html=True
     )
 
@@ -533,16 +543,6 @@ else:
     matrice_filtrata_df = pd.DataFrame()
     st.warning("La matrice è vuota o la colonna 'consumo_l' non esiste.")
 
-
-
-######### da cancellare!!!!############
-# Visualizza la matrice filtrata
-#if consumo_medio_km_l is not None:
-#    st.dataframe(matrice_filtrata_df)
-#else:
-#    st.warning("Consumo medio non disponibile per questa combinazione.")
-
-
 ################### NETWORKX_2 ###################
 # il dataframe è --> matrice_filtrata_df
 G = nx.DiGraph()
@@ -578,7 +578,6 @@ df_percorso_filtrato = matrice_filtrata_df[
 ]
 
 # Elimina alcune colonne e Rinomina le colonne prima di mostrarle
-
 
 df_percorso_filtrato = df_percorso_filtrato.drop(columns={"nodo_id_partenza","nodo_id_arrivo","ordine_partenza", "ordine_arrivo"}).rename(columns={
     "nodo_name_partenza": "Nome partenza",
@@ -700,9 +699,9 @@ with col14:
         "<div style='text-align: center; font-size: 25px; font-weight: bold;'><br>Percorso migliore per<br>minimizzare il costo del carburante e<br>massimizzare i litri del serbatoio</div>",
         unsafe_allow_html=True
     )
-    #spazio a capo
+with col11:    
     st.markdown(
-        "<div style='text-align: center; font-size: 10px;'><br><br></div>",
+        "<div style='text-align: center; font-size: 10px;'>*Assunzioni: partenza con il serbatoio pieno; ogni rifornimento raggiunge la capacità massima del serbatoio<br>Precauzione: arrivo con almeno 3l di carburante nel serbatoio</div>",
         unsafe_allow_html=True
     )
 
