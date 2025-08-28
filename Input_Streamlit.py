@@ -506,6 +506,9 @@ for nodo1, nodo2 in combinazioni:
         # Aggiungi colonna con peso dell'arco
         peso_arco = round(consumo_l * prezzo_medio_arrivo, 2)
 
+        # Aggiungi colonna con brand del nodo di arrivo
+        brand_arrivo = nodo2.Brand if hasattr(nodo2, "Brand") else None
+        
         if consumo_medio_km_l is not None:
             matrice.append({
                 "nodo_id_partenza": nodo1.nodo_id,
@@ -517,7 +520,8 @@ for nodo1, nodo2 in combinazioni:
                 "prezzo_medio_arrivo": prezzo_medio_arrivo,
                 "distanza_totale_km": distanza_totale,
                 "consumo_l": consumo_l,
-                "peso_arco" : peso_arco
+                "peso_arco" : peso_arco,
+                "brand_arrivo" : brand_arrivo
             })
         else:
             st.warning("Consumo medio non disponibile per questa combinazione.")
@@ -578,15 +582,27 @@ df_percorso_filtrato = matrice_filtrata_df[
 ]
 
 # Elimina alcune colonne e Rinomina le colonne prima di mostrarle
-
 df_percorso_filtrato = df_percorso_filtrato.drop(columns={"nodo_id_partenza","nodo_id_arrivo","ordine_partenza", "ordine_arrivo"}).rename(columns={
     "nodo_name_partenza": "Nome partenza",
     "nodo_name_arrivo": "Nome arrivo",
+    "brand_arrivo" : "Brand arrivo",
     "prezzo_medio_arrivo": "Prezzo medio arrivo (€)",
     "distanza_totale_km": "Distanza totale (km)",
     "peso_arco": "Costo carburante utilizzato (€)",
     "consumo_l" : "Consumo (l)"
 })
+
+# Ordina colonne
+df_percorso_filtrato = df_percorso_filtrato[[
+    "Nome partenza",
+    "Nome arrivo",
+    "Brand arrivo",
+    "Prezzo medio arrivo (€)",
+    "Distanza totale (km)",
+    "Consumo (l)",
+    "Costo carburante utilizzato (€)"
+]]
+
 col15, col16 = st.columns(2)
 with col15:
     st.dataframe(df_percorso_filtrato)
@@ -743,6 +759,9 @@ for nodo1, nodo2 in combinazioni:
         # Aggiungi colonna con peso dell'arco
         peso_arco = round(consumo_l * prezzo_medio_arrivo, 2)
 
+        # Aggiungi colonna con brand del nodo di arrivo
+        brand_arrivo = nodo2.Brand if hasattr(nodo2, "Brand") else None
+        
         if consumo_medio_km_l is not None:
             matrice.append({
                 "nodo_id_partenza": nodo1.nodo_id,
@@ -754,7 +773,8 @@ for nodo1, nodo2 in combinazioni:
                 "prezzo_medio_arrivo": prezzo_medio_arrivo,
                 "distanza_totale_km": distanza_totale,
                 "consumo_l": consumo_l,
-                "peso_arco" : peso_arco
+                "peso_arco" : peso_arco,
+                "brand_arrivo" : brand_arrivo
             })
         else:
             st.warning("Consumo medio non disponibile per questa combinazione.")
@@ -779,14 +799,6 @@ if not matrice_df.empty and "consumo_l" in matrice_df.columns:
 else:
     matrice_filtrata_df = pd.DataFrame()
     st.warning("La matrice è vuota o la colonna 'consumo_l' non esiste.")
-
-
-# Visualizza la matrice filtrata
-#-#if consumo_medio_km_l is not None:
-#-#    st.dataframe(matrice_filtrata_df)
-#-#else:
-#-#    st.warning("Consumo medio non disponibile per questa combinazione.")
-
 
 ################### NETWORKX_2 ###################
 # il dataframe è --> matrice_filtrata_df
@@ -823,16 +835,26 @@ df_percorso_filtrato = matrice_filtrata_df[
 ]
 
 # Elimina alcune colonne e Rinomina le colonne prima di mostrarle
-
-
 df_percorso_filtrato = df_percorso_filtrato.drop(columns={"nodo_id_partenza","nodo_id_arrivo","ordine_partenza", "ordine_arrivo"}).rename(columns={
     "nodo_name_partenza": "Nome partenza",
     "nodo_name_arrivo": "Nome arrivo",
+    "brand_arrivo" : "Brand arrivo",
     "prezzo_medio_arrivo": "Prezzo medio arrivo (€)",
     "distanza_totale_km": "Distanza totale (km)",
     "peso_arco": "Costo carburante utilizzato (€)",
     "consumo_l" : "Consumo (l)"
 })
+
+# Ordina colonne
+df_percorso_filtrato = df_percorso_filtrato[[
+    "Nome partenza",
+    "Nome arrivo",
+    "Brand arrivo",
+    "Prezzo medio arrivo (€)",
+    "Distanza totale (km)",
+    "Consumo (l)",
+    "Costo carburante utilizzato (€)"
+]]
 
 with col16:
     st.dataframe(df_percorso_filtrato)
