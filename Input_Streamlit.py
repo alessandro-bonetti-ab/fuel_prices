@@ -30,13 +30,19 @@ caselli_partenza = caselli_partenza_df["nodo_name"].dropna().unique()
 caselli_arrivo = caselli_arrivo_df["nodo_name"].dropna().unique()
 tipi_carburante = carburante_df["carburante"].dropna().unique()
 
+# Valori di default per partenza e arrivo
+default_partenza = "MILANO EST"
+default_arrivo = "NAPOLI EST"
+# Trova l'indice dei valori di default
+index_partenza = list(caselli_partenza).index(default_partenza) if default_partenza in caselli_partenza else 0
+index_arrivo = list(caselli_arrivo).index(default_arrivo) if default_arrivo in caselli_arrivo else 0
 
 # Prima riga di selectbox
 col1, col2, col3 = st.columns(3)
 with col1:
-    partenza = st.selectbox("Seleziona il punto di partenza", caselli_partenza)
+    partenza = st.selectbox("Seleziona il punto di partenza", caselli_partenza, index=index_partenza)
 with col2:
-    arrivo = st.selectbox("Seleziona il punto di arrivo", caselli_arrivo)
+    arrivo = st.selectbox("Seleziona il punto di arrivo", caselli_arrivo, index=index_arrivo)
 with col3:   # Intervallo di date
     start_date_2025 = datetime.date(2025, 1, 1)
     end_date_2025 = datetime.date(2025, 12, 31)
