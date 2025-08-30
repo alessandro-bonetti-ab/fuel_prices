@@ -861,11 +861,17 @@ df_percorso_filtrato = df_percorso_filtrato[[
     "Costo carburante utilizzato (€)"
 ]]
 
+# Ricalcola il costo totale escludendo l'ultimo arco (perché effettivamente non viene effettuato il rifornimento al casello di uscita)
+if not df_percorso_filtrato.empty:
+    costo_senza_ultimo_arco = df_percorso_filtrato.iloc[:-1]["Costo carburante utilizzato (€)"].sum()
+else:
+    costo_senza_ultimo_arco = 0
+
 with col16:
     st.dataframe(df_percorso_filtrato)
 with col18:
     st.markdown(
-            f"<div style='text-align: center; font-size: 16px;'>Costo carburante totale: <b>{round(costo_totale,2)} €</b></div>",
+            f"<div style='text-align: center; font-size: 16px;'>Costo carburante totale: <b>{round(costo_senza_ultimo_arco,2)} €</b></div>",
             unsafe_allow_html=True
         )
 
