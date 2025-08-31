@@ -13,7 +13,7 @@ col100, col101, col102, col103, col104, col105, col106 = st.columns(7)
 with col103:
     st.image("images/NITIVAN_Logo.png", width=150)
 
-col107, col108, col109 = st.columns(1,2,1)
+col107, col108, col109 = st.columns([1, 2, 1])
 with col108:
     st.markdown(
         "<div style='text-align: center; font-size: 40px; font-weight: bold;'>Scopri i dati su carburante e distributori<br>per poter prendere decisioni più consapevoli per NITIVAN</div>",
