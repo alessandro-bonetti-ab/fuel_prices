@@ -11,14 +11,9 @@ st.set_page_config(layout="wide")
 # Logo
 col100, col101, col102 = st.columns(3)
 with col101:
-    st.markdown(
-        """
-        <div style="display: flex; justify-content: center;">
-            <img src="images/NITIVAN_Logo.png" width="150">
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+    st.markdown("<div style='text-align:center;'>", unsafe_allow_html=True)
+    st.image("images/NITIVAN_Logo.png", width=150)
+    st.markdown("</div>", unsafe_allow_html=True)
 
 # Titolo e descrizione
 st.markdown(
