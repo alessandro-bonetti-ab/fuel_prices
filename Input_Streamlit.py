@@ -9,7 +9,7 @@ from itertools import combinations
 st.set_page_config(layout="wide")
 
 # Titolo e descrizione
-col100, col101, col1012 columns(3):
+col100, col101, col1012 st.columns(3):
 with col101:
     st.markdown(
         "<div style='text-align: center; font-size: 40px; font-weight: bold;'>Qual è il Brand di carburante più conveniente per noi?</div>",
