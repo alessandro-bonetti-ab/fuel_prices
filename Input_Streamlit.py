@@ -9,9 +9,9 @@ from itertools import combinations
 st.set_page_config(layout="wide")
 
 # Logo
-col100, col101, col102 = st.columns(3)
+col100, col101, col102, col103, col104 = st.columns(5)
 with col102:
-    st.image("images/NITIVAN_Logo.png", width=100)
+    st.image("images/NITIVAN_Logo.png", width=150)
 
 # Titolo e descrizione
 st.markdown(
