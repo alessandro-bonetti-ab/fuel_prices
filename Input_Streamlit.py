@@ -9,10 +9,15 @@ from itertools import combinations
 st.set_page_config(layout="wide")
 
 # Titolo e descrizione
-st.markdown(
-    "<div style='text-align: center; font-size: 40px; font-weight: bold;'>Qual è la carta carburante migliore?</div>",
-    unsafe_allow_html=True
-)
+col100, col101, col1012 columns(3):
+with col101:
+    st.markdown(
+        "<div style='text-align: center; font-size: 40px; font-weight: bold;'>Qual è il Brand di carburante più conveniente per noi?</div>",
+        unsafe_allow_html=True
+    )
+with col102:
+    st.image("images/NITIVAN_Logo.png", caption="NITIVAN Logo", use_column_width=True)
+
 #spazio a capo
 st.markdown(
     "<div style='text-align: center; font-size: 10px;'><br><br></div>",
