@@ -16,7 +16,7 @@ with col103:
 col107, col108, col109 = st.columns([1, 2, 1])
 with col108:
     st.markdown(
-        "<div style='text-align: center; font-size: 20px;'>Scopri i dati su <b>carburante</b> e <b>distributori</b> per poter prendere decisioni più consapevoli per <b>NITIVAN</b><br> <br></div>",
+        "<div style='text-align: center; font-size: 20px;'>Scopri i dati su <b>carburante</b> e <b>distributori</b><br>per poter prendere decisioni più consapevoli per <b>NITIVAN</b><br> <br></div>",
         unsafe_allow_html=True
     )
 
