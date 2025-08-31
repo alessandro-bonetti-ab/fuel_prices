@@ -16,7 +16,7 @@ with col101:
         unsafe_allow_html=True
     )
 with col102:
-    st.image("images/NITIVAN_Logo.png", caption="NITIVAN Logo", use_column_width=True)
+    st.image("images/NITIVAN_Logo.png", use_container_width=True)
 
 #spazio a capo
 st.markdown(
