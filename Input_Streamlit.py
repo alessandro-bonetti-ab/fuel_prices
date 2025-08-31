@@ -14,7 +14,7 @@ with col101:
     st.markdown(
         """
         <div style="display: flex; justify-content: center;">
-            <img src="images/NITIVAN_Logo.png" alt="Immagine centrata">
+            <img src="images/NITIVAN_Logo.png" width="150">
         </div>
         """,
         unsafe_allow_html=True
