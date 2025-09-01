@@ -426,13 +426,17 @@ else:
 
     fig_brand = go.Figure()
 
+    # Conta quanti distributori per brand ci sono nel percorso
+    brand_counts = nodi_distributori.groupby("Brand")["nodo_id"].nunique().to_dict()
+
     # Linee per ciascun brand filtrato
     for brand, gruppo in prezzi_brand_df.groupby("Brand"):
+        count = brand_counts.get(brand, 0)
         fig_brand.add_trace(go.Scatter(
             x=gruppo["data_update"],
             y=gruppo["prezzo_medio_brand"],
             mode='lines+markers',
-            name=f"{brand}"
+            name=f"{brand} ({count})"  # aggiunge il numero tra parentesi
         ))
 
     # Linea della media giornaliera totale (non filtrata)
