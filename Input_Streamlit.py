@@ -397,7 +397,7 @@ else:
     fig_prezzi.add_trace(go.Scatter(
         x=media_giornaliera_df["data_update"],
         y=media_giornaliera_df["prezzo_medio_giornaliero"],
-        mode='lines',
+        mode='lines+markers',
         name='Media giornaliera totale',
         line=dict(color='lightgrey', dash='dash'),
         hoverinfo='x+y'
@@ -443,7 +443,7 @@ else:
     fig_brand.add_trace(go.Scatter(
         x=media_giornaliera_df["data_update"],
         y=media_giornaliera_df["prezzo_medio_giornaliero"],
-        mode='lines',
+        mode='lines+markers',
         name='Media giornaliera totale',
         line=dict(color='lightgrey', dash='dash'),
         hoverinfo='x+y'
