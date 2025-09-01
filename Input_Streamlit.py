@@ -436,7 +436,7 @@ else:
             x=gruppo["data_update"],
             y=gruppo["prezzo_medio_brand"],
             mode='lines+markers',
-            name=f"{brand} ({count} "distr.")"  # aggiunge il numero tra parentesi
+            name=f"{brand} ({count} distr.)"  # aggiunge il numero tra parentesi
         ))
 
     # Linea della media giornaliera totale (non filtrata)
